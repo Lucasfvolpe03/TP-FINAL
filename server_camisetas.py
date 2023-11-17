@@ -49,12 +49,12 @@ def delete_camiseta(camiseta_code):
     return jsonify(result)
 
 
-@app.route("/game/<game_code>", methods=["GET"])
+@app.route("/camiseta/<camiseta_code>", methods=["GET"])
 def get_game_by_id(camiseta_code):
     camiseta = camiseta_controller_poo.get_by_id(camiseta_code)
     return jsonify(camiseta)
 
-@app.route("/game/usd/<game_code>", methods=["GET"])
+@app.route("/camiseta/usd/<camiseta_code>", methods=["GET"])
 def get_camiseta_by_id_usd(camiseta_code):
     camiseta = camiseta_controller_poo.get_by_id(camiseta_code)
     xr = get_xr()
